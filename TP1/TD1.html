@@ -6,52 +6,72 @@
 
 
 <style>
-ul.first {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: orange;
-}
 
-li.first {
-    float: left;
-}
 
-li.first a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
-
-li.first a:hover {
-    background-color: #111111;
-}
-
-ul.second {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: brown;
-}
-
-li.second {
-    
-}
-
-li.second a {
-    display: block;
+.dropbtn {
+    background-color: #4CAF50;
     color: white;
-    text-align: center;
     padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 16px;
+    width: 200px;
+    background-color: #f1f1f1;
+	position: absolute;
+	right:16px;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
     text-decoration: none;
 }
 
-li.second a:hover {
-    background-color: #111111;
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
 }
 
 
@@ -59,17 +79,83 @@ li.second a:hover {
 </head>
 <body>
 
-<ul class="first">
-  <li class="first"><a href="#info">info</a></li>
-		<li class="second"><a href="#General">General</a></li>
+<iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
 
-  <li class="first"><a href="#Databases">Databases</a></li>
-		<!--<li class="first"><a href="#info">info</a></li> -->
-  <li class="first"><a href="#Calculate">Calculate</a></li>
-		<!--<li class="first"><a href="#info">info</a></li>-->
-  <li class="first"><a href="#Manipulate">Manipulate</a></li>
-		<!--<li class="first"><a href="#info">info</a></li>-->
+
+
+
+<h1>FactSage 7.1</h1>
+
+<ul>
+  <li><a href="http://www.crct.polymtl.ca/factsage/fs_general.php" target="iframe_a">Introduction</a></li>
+  <li><a href="http://www.crct.polymtl.ca/fact/documentation/" target="iframe_a">Database Documentation</a></li>
+  <li><a href="http://www.crct.polymtl.ca/factsage/FactSage_Applications/" target="iframe_a">FactSage Applications</a></li>
+  <li><a href="http://www.crct.polymtl.ca/factsage/fs_publications.php" target="iframe_a">Posters and Publications</a></li>
+<li><a href="http://www.crct.polymtl.ca/conferences.php" target="iframe_a">Conferences and Workshops</a></li>
+<li><a href="http://www.crct.polymtl.ca/fact/pricelist.php" target="iframe_a">Ordering and Representatives</a></li>
+<li><a href="http://www.crct.polymtl.ca/fact/download.php" target="iframe_a">Phase Diagrams and Documentation Download</a></li>
+<li><a href="http://www.crct.polymtl.ca/factsage/fs_family.php" target="iframe_a">FactSage Products</a></li>
+<li><a href="http://www.crct.polymtl.ca/factsage/fs_clientslist.php" target="iframe_a">CRCT Clients</a></li>
+<li><a href="http://www.crct.polymtl.ca/factweb.php" target="iframe_a">Fact-Web</a></li>
+<li><a href="http://www.crct.polymtl.ca/fact/facthelp/fs71_news.htm" target="iframe_a">FactSage 7.1 ~News~</a></li>
+<li><a href="http://www.crct.polymtl.ca/fact/facthelp/fs70_news.htm" target="iframe_a">FactSage 7.0 ~News~</a></li>
+<li><a href="http://www.crct.polymtl.ca/factsage/fsdl_service.htm" target="iframe_a">Download Service</a></li>
+<li><a href="http://www.crct.polymtl.ca/fact/facthelp/Images_ShowMe71/ShowMe71.htm" target="iframe_a">Installation Instructions</a></li>
 </ul>
+
+
+
+
+
+
+
+
+
+<div class="dropdown">
+  <button class="dropbtn">Info</button>
+  <div class="dropdown-content">
+  <a href="http://www.crct.polymtl.ca/factsage/fs_general.php" target="iframe_a">General</a>
+
+</div>
+</div>
+		 
+<div class="dropdown">
+  <button class="dropbtn">Databases</button>
+  <div class="dropdown-content">
+  <a href="http://www.crct.polymtl.ca/fact/documentation/" target="iframe_a">Documentation</a>
+  <a href="http://www.crct.polymtl.ca/factsage/fs_viewdata.php" target="iframe_a">View Data</a>
+  <a href="http://www.crct.polymtl.ca/factsage/fs_compound.php" target="iframe_a">Compound</a>
+  <a href="http://www.crct.polymtl.ca/factsage/fs_solution.php" target="iframe_a">Solution</a>
+
+</div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Calculate</button>
+  <div class="dropdown-content">
+  <a href="http://www.crct.polymtl.ca/factsage/fs_reaction.php" target="iframe_a">Reaction</a>
+<a href="http://www.crct.polymtl.ca/factsage/fs_predom.php" target="iframe_a">Predom</a>
+<a href="http://www.crct.polymtl.ca/factsage/fs_eph.php" target="iframe_a">EpH</a>
+<a href="http://www.crct.polymtl.ca/factsage/fs_equilib.php" target="iframe_a">Equilib</a>
+<a href="http://www.crct.polymtl.ca/factsage/fs_pd.php" target="iframe_a">Phase Diagram</a>
+<a href="http://www.crct.polymtl.ca/factsage/fs_optisage.php" target="iframe_a">OptiSage</a>
+
+</div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Manipulate</button>
+  <div class="dropdown-content">
+  <a href="http://www.crct.polymtl.ca/factsage/fs_results.php" target="iframe_a">Results</a>
+<a href="http://www.crct.polymtl.ca/factsage/fs_mixture.php" target="iframe_a">Mixture</a>
+<a href="http://www.crct.polymtl.ca/factsage/fs_factxml.php" target="iframe_a">Fact-XML</a>
+<a href="http://www.crct.polymtl.ca/factsage/fs_figure.php" target="iframe_a">Figure</a>
+<a href="http://www.crct.polymtl.ca/factsage/fs_viscosity.php" target="iframe_a">Viscosity</a>
+<a href="#Manipulate">Quit</a>
+
+
+</div>
+</div>
 
 
 </body>
