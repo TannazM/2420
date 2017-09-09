@@ -4,10 +4,27 @@
 <title>FactSage7.1</title>
 
 
-
+<!------#######################################################-------STYLE-----##############################################################################----->
 <style>
 
 
+
+
+/*-------------------------------------------------------------iframe fonction style---------------------------------------------------------------------------------*/
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+
+
+/*---------------------------------------------------------dropdown horizontal menu style----------------------------------------------------------------------------*/
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -49,7 +66,7 @@
 }
 
 
-
+/*---------------------------------------------------------------Vertical side menu style---------------------------------------------------------------------------*/
 
 ul {
     list-style-type: none;
@@ -64,7 +81,7 @@ ul {
 li a {
     display: block;
     color: #000;
-    padding: 8px 16px;
+    padding: 8 px 16px;
     text-decoration: none;
 }
 
@@ -77,7 +94,12 @@ li a:hover {
 
 </style>
 </head>
+
+<!--######################################################################-----BODY---###########################################################################----->
 <body>
+
+<!-----------------------------------------------------------------------iframe implementation----------------------------------------------------------------------->
+
 
 <iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
 
@@ -85,6 +107,8 @@ li a:hover {
 
 
 <h1>FactSage 7.1</h1>
+
+<!--------------------------------------------------------------Vertical menu implementation------------------------------------------------------------------------->
 
 <ul>
   <li><a href="http://www.crct.polymtl.ca/factsage/fs_general.php" target="iframe_a">Introduction</a></li>
@@ -108,7 +132,7 @@ li a:hover {
 
 
 
-
+<!-------------------------------------------------------------Dropdown Horizontal menu implementation-------------------------------------------------------------->
 
 
 <div class="dropdown">
