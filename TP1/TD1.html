@@ -10,18 +10,6 @@
 
 
 
-/*-------------------------------------------------------------iframe fonction style---------------------------------------------------------------------------------*/
-
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "ajax_info.txt", true);
-  xhttp.send();
-}
 
 
 /*---------------------------------------------------------dropdown horizontal menu style----------------------------------------------------------------------------*/
@@ -98,6 +86,27 @@ li a:hover {
 <!--######################################################################-----BODY---###########################################################################----->
 <body>
 
+
+
+<script>
+
+/*-------------------------------------------------------------AJAX httprequest example script---------------------------------------------------------------------------------*/
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+
+
+
 <!-----------------------------------------------------------------------iframe implementation----------------------------------------------------------------------->
 
 
@@ -136,7 +145,7 @@ li a:hover {
 
 
 <div class="dropdown">
-  <button class="dropbtn">Info</button>
+  <button class="dropbtn" onclick="loadDoc()">Info</button>
   <div class="dropdown-content">
   <a href="http://www.crct.polymtl.ca/factsage/fs_general.php" target="iframe_a">General</a>
 
