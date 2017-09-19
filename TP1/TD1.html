@@ -25,6 +25,7 @@
 .dropdown {
     position: relative;
     display: inline-block;
+
 }
 
 .dropdown-content {
@@ -47,6 +48,7 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
+
 }
 
 .dropdown:hover .dropbtn {
@@ -90,7 +92,7 @@ li a:hover {
 
 <script>
 
-/*-------------------------------------------------------------AJAX httprequest example script---------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------AJAX httprequest example script---------------------------------------------------------------------------*/
 
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
@@ -102,15 +104,17 @@ function loadDoc() {
   xhttp.open("GET", "ajax_info.txt", true);
   xhttp.send();
 }
+
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").load("demo_test.txt");
+    });
+});
+
 </script>
 
 
-
-
-<!-----------------------------------------------------------------------iframe implementation----------------------------------------------------------------------->
-
-
-<iframe height="300px" width="100%" src="demo_iframe.htm" name="iframe_a"></iframe>
 
 
 
@@ -143,8 +147,8 @@ function loadDoc() {
 
 <!-------------------------------------------------------------Dropdown Horizontal menu implementation-------------------------------------------------------------->
 
-
-<div class="dropdown">
+<div align="center">
+<div class="dropdown" >
   <button class="dropbtn" onclick="loadDoc()">Info</button>
   <div class="dropdown-content">
   <a href="http://www.crct.polymtl.ca/factsage/fs_general.php" target="iframe_a">General</a>
@@ -152,7 +156,7 @@ function loadDoc() {
 </div>
 </div>
 		 
-<div class="dropdown">
+<div class="dropdown" align="center">
   <button class="dropbtn">Databases</button>
   <div class="dropdown-content">
   <a href="http://www.crct.polymtl.ca/fact/documentation/" target="iframe_a">Documentation</a>
@@ -163,7 +167,7 @@ function loadDoc() {
 </div>
 </div>
 
-<div class="dropdown">
+<div class="dropdown" >
   <button class="dropbtn">Calculate</button>
   <div class="dropdown-content">
   <a href="http://www.crct.polymtl.ca/factsage/fs_reaction.php" target="iframe_a">Reaction</a>
@@ -176,7 +180,7 @@ function loadDoc() {
 </div>
 </div>
 
-<div class="dropdown">
+<div class="dropdown" >
   <button class="dropbtn">Manipulate</button>
   <div class="dropdown-content">
   <a href="http://www.crct.polymtl.ca/factsage/fs_results.php" target="iframe_a">Results</a>
@@ -189,6 +193,13 @@ function loadDoc() {
 
 </div>
 </div>
+</div>
+<!-----------------------------------------------------------------------iframe implementation----------------------------------------------------------------------->
+
+
+<div align="center"><iframe height="400px" width="60%" style="border:none;" src="demo_iframe.htm" name="iframe_a"></iframe></div>
+
+
 
 
 </body>
