@@ -4,7 +4,7 @@
 <title>FactSage7.1</title>
 <head>
 	<link rel = "stylesheet" href = "CSS/style.css">
-	<script src = "jScript/jquery-3.2.1.min.js"></script>
+	<script src = "jScript/jquery.js"></script>
 	<script src = "jScript/ajax.js"></script>
 	<script src = "jScript/sidebar.js"></script>
 	
@@ -17,63 +17,66 @@
 	<!-------------------------------------------------------------Dropdown Horizontal menu implementation-------------------------------------------------------------->
 	<ul>
 		<li class = "dropdown">
-			<a href="javascript:void(0)" class ="dropbtn">Info</a>
+			<div href="#" class ="dropbtn">Info</div>
 			<div class = "dropdown-content">
-				<a href = #>General</a>
+				<div href = "#" onclick = "loadDoc('fs_general.php')">General</div>
 			</div>
 		</li>
 		<li class = "dropdown">
-			<a href="javascript:void(0)" class ="dropbtn">Databases</a>
+			<div href="#" class ="dropbtn">Databases</div>
 			<div class = "dropdown-content">
-				<a href = #>Documentation</a>
-				<a href = #>View Data</a>	
-				<a href = #>Compound</a>
-				<a href = #>Solution</a>
+				<div href = "#">Documentation</div>
+				<div href = "#">View Data</div>	
+				<div href = "#">Compound</div>
+				<div href = "#">Solution</div>
 			</div>
 		</li>
 		<li class = "dropdown">
-			<a href="javascript:void(0)" class ="dropbtn">Calculate</a>
+			<div href="#" class ="dropbtn">Calculate</div>
 			<div class = "dropdown-content">
-				<a href = #>Reaction</a>
-				<a href = #>Predom</a>
-				<a href = #>Eph</a>
-				<a href = #>Equilib</a>
-				<a href = #>Phase Diagram</a>
-				<a href = #>OptiSage</a>
+				<div href = "#" onclick = "loadDoc('fs_reaction.php')">Reaction</div>
+				<div href = "#">Predom</div>
+				<div href = "#">Eph</div>
+				<div href = "#">Equilib</div>
+				<div href = "#">Phase Diagram</div>
+				<div href = "#">OptiSage</div>
 			</div>
 		</li>
 		<li class = "dropdown">
-			<a href="javascript:void(0)" class ="dropbtn">Manipulate</a>
+			<div href="#" class ="dropbtn">Manipulate</div>
 			<div class = "dropdown-content">
-				<a href = #>Results</a>
-				<a href = #>Mixture</a>
-				<a href = #>Fact-XML</a>
-				<a href = #>Figure</a>
-				<a href = #>Viscosity</a>
-				<a href = #>Quit</a>
+				<div href = "#">Results</div>
+				<div href = "#">Mixture</div>
+				<div href = "#">Fact-XML</div>
+				<div href = "#">Figure</div>
+				<div href = "#">Viscosity</div>
+				<div href = "#">Quit</div>
 	
 			</div>
 		</li>
-		<!-- the element to open the sidenav -->
-		<li><a href =# onclick="openNav()">Open sidebar</a></li>
+		<!-- the element to open the sidenav 
+		<li><a href ="#" onclick="openNav()">Open sidebar</a></li>
+		-->
 	</ul>	
 
 	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#">Introduction</a>
-		<a href="#">Database Documentation</a>
-		<a href="#">FactSage Applications</a>
-		<a href="#">Posters and Publication</a>
-		<a href= #>Conferences and Workshops</a>
-		<a href= #>Ordering and Representatives</a>
-		<a href= #>Phase Diagrams and Documentation Download</a>
-		<a href= #>FactSage Products</a>
-		<a href= #>CRCT Clients</a>
-		<a href= #>Fact-Web</a>
-		<a href= #>FactSage 7.1 ~News~</a>
-		<a href= #>FactSage 7.0 ~News~</a>
-		<a href= #>Download Service</a>
-		<a href= #>Installation Instructions</a>
+		<!--
+		<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+		-->
+		<div href="#">Introduction</div>
+		<div href="#">Database Documentation</div>
+		<div href="#">FactSage Applications</div>
+		<div href="#">Posters and Publication</div>
+		<div href="#">Conferences and Workshops</div>
+		<div href="#">Ordering and Representatives</div>
+		<div href="#">Phase Diagrams and Documentation Download</div>
+		<div href="#">FactSage Products</div>
+		<div href="#">CRCT Clients</div>
+		<div href="#">Fact-Web</div>
+		<div href="#">FactSage 7.1 ~News~</div>
+		<div href="#">FactSage 7.0 ~News~</div>
+		<div href="#">Download Service</div>
+		<div href="#">Installation Instructions</div>
 	
 	</div>
 
@@ -83,9 +86,7 @@
 	</div>
 
 
-<div class = "frame" align="center">HELLO</div>
-
-
+	<div id = "general" align= "center"></div>
 
 
 </body>
