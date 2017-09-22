@@ -1,16 +1,15 @@
 h1 {
     font-size: 30px;
-font-weight: bold;
-font-variant: small-caps;
-text-align: center;
-position: relative;
-text-shadow: 3px 2px grey;
-letter-spacing: 5px;
-text-decoration: overline grey;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;/*texte écrit dans le centre de la page*/
+    text-shadow: 3px 2px grey;/*ombrage gris de texte*/
+    letter-spacing: 5px;/*l'espace entre chaque lettre du texte*/
+    text-decoration: overline grey; /*ligne gris en haut du texte*/
 
 }
 /*---------------------------------------------------------dropdown horizontal menu style----------------------------------------------------------------------------*/
-/*The container for when you want to create a horizontal bar*/
+/*Le contenu nécessaire afin de créer le menu horizontal*/
 ul {
     width:100%
     list-style-type: none;
@@ -18,13 +17,13 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #5D5D5D;
-border-style: inset;
+    border-style: outset;
 }
-/*Must be called before creating the buttons for the horizontal bar and called as a dropdown class to create a droipdown button*/
+/*Doit Être appelé avant la création des boutons de menu horizontal et appelé comme une classe dropdown afind de créer un bouton dropdown*/
 li {
     float: left;
 }
-/*The dropdown button which has a href="javascript:void(0)" in the same call*/
+/*Le bouton dropdown ayant a href="javascript:void(0)" dans le même appel*/
 li div, .dropbtn {
     display: inline-block;
     color: white;
@@ -36,8 +35,10 @@ li div, .dropbtn {
 }
 
 li div div:hover, .dropdown:hover .dropbtn {
-    background-color: #FFE3C7;
-	color: black;
+    background-color: #C4B2A0;
+    color: black;
+    border-style: inset;
+
 }
 
 li.dropdown {
@@ -49,22 +50,26 @@ li.dropdown {
     display: none;
     position: absolute;
     background-color: #5D5D5D;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 0px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    padding: 0px 0px;
+
 }
 
-/*The content for each dropdown*/
+/*Le contenu de chaque dropdown*/
 .dropdown-content div {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-    transition: 0.3s
+    transition: 0.3s;
+    border-style: inset;
+
 }
 
-.dropdown-content div:hover {background-color: #FFE3C7}
+.dropdown-content div:hover {background-color: #C4B2A0}
 {
 color: white;
 }
@@ -75,25 +80,25 @@ color: white;
 
 /*---------------------------------------------------------------Vertical side menu style---------------------------------------------------------------------------*/
 
-/* The side navigation menu */
+/* la navigation de menu vertical */
 .sidenav {
     height: 78.5%; /* 100% Full-height */
-    width: 20%; /* 0 width - should be changed with JavaScript but the teacher doesn't like it */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    width: 20%;  
+    position: fixed; /* reste dans une place */
+    z-index: 1; /*reste en haut */
     top: 0;
     right: 0;
     margin-right: 10px;
     margin-top: 127px;
-    background-color: #5D5D5D; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 0px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    border-style: inset;
+    background-color: #5D5D5D; /* Noire*/
+    overflow-x: hidden; /* désactiver le rouleux ver le bas */
+    padding-top: 0px; /* Placer le contenu 60px d'en haut */
+    transition: 0.5s; /* 0.5 seconde d'effet de transition avant de faire glisser dans le sidenav */
+    border-style: outset;/*l'effet de relief (menu non enfoncé)*/ 
 
 }
 
-/* The navigation menu links */
+/* Les liens de menu de navigation */
 .sidenav div {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -101,16 +106,17 @@ color: white;
     color: white;
     display: block;
     transition: 0.3s;
-border-bottom: 3px solid #FFE3C7;
+
 }
 
-/* When you mouse over the navigation links, change their color */
+/* Changement de couleur lors du placement du souri sur les liens de navigation */
 .sidenav div:hover, .offcanvas div:focus{
-    background-color: #FFE3C7;
-color: black;
+    background-color: #C4B2A0;
+    color: black;
+    border-style: inset;
 }
 
-/* Position and style the close button (top right corner) */
+/* Position et style de button de fermeture (coin en haut à droite) */
 /**
 .sidenav .closebtn {
     position: absolute;
@@ -120,14 +126,14 @@ color: black;
     margin-right: 50px;
 }
 **/
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/* le Style du contenu de la page - à être utiliser si on veux pousser le contenu de la page à la doite lors de l'ouverture la navigation vertical */
 #main {
     transition: margin-right .5s;
     padding: 20px;
 
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* changement de style de sidenav dans le cas des écrans plus petits où la hauteur est moins de 450px (moins de padding et moins grand police) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
